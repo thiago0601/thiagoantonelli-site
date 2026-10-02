@@ -1,23 +1,32 @@
-# thiagoantonelli.com.br
+# Lucas a toda velocidade — 3 anos
 
-Página estática pronta para publicação no GitHub Pages.
+Convite responsivo e estático, sem instalação ou dependências. Data: 19/12/2026. Local: restaurante Dona Ju, Águas Claras. O horário fica “A confirmar” até ser editado. A contagem usa o fuso de Brasília e, sem horário definido, conta até o início do dia 19.
 
-## Publicar
+## Publicar no GitHub Pages
 
-1. Crie um repositório público no GitHub chamado `thiagoantonelli-site`.
-2. Na pasta deste projeto, execute:
+1. Extraia o ZIP no computador.
+2. No GitHub, crie um repositório público chamado `lucas-3-anos`.
+3. Abra o repositório e clique em **Add file → Upload files**. Em repositório vazio, clique em **uploading an existing file**.
+4. Arraste o arquivo `index.html`, a pasta `assets`, o `README.md` e `.nojekyll` para a área de upload. O `index.html` deve ficar na raiz, sem uma pasta externa `lucas-aniversario`.
+5. Clique em **Commit changes**.
+6. Vá em **Settings → Pages**. Em **Source**, selecione **Deploy from a branch**.
+7. Selecione **main** e **/(root)** e clique em **Save**.
+8. Aguarde a publicação. O endereço será `https://SEU-USUARIO.github.io/lucas-3-anos/`. Se usar `thiago0601`, será `https://thiago0601.github.io/lucas-3-anos/`.
 
-```bash
-git init
-git add .
-git commit -m "Criar pagina Hello World"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/thiagoantonelli-site.git
-git push -u origin main
-```
+Não é necessário configurar domínio próprio. O link github.io já usa HTTPS.
 
-3. No repositório, abra **Settings → Pages**. Em **Build and deployment**, escolha **Deploy from a branch**, `main` e `/ (root)`. O arquivo `CNAME` define `thiagoantonelli.com.br` como domínio personalizado; confirme que ele aparece em **Custom domain**.
-4. No DNS do Registro.br, crie registros A para o domínio raiz (`@`) com os quatro IPs informados pela documentação atual do GitHub Pages. Para `www`, crie um CNAME apontando para `SEU_USUARIO.github.io`.
-5. Aguarde a verificação do DNS e habilite **Enforce HTTPS** em Settings → Pages.
+## Informar o horário
 
-Antes de trocar o DNS, verifique se já existem registros de site ou e-mail no domínio. Preserve os registros de e-mail (MX, SPF, DKIM e DMARC).
+No `index.html`, procure `const FESTA`. Troque `horario: null` por `horario: '12:00'`, usando o horário real. O texto e a contagem serão atualizados automaticamente.
+
+## Editar o conteúdo
+
+Os textos estão no `index.html`. A foto ilustrativa está em `assets/decoracao.jpg`; pode ser substituída por outra foto mantendo esse nome. O botão do mapa abre uma busca pelo restaurante, pois o endereço exato ainda não foi informado. Para usar a localização verificada, substitua o endereço do link por um link compartilhado do Google Maps.
+
+## Visualizar no computador
+
+Abra `index.html` com um navegador. Mantenha a pasta `assets` ao lado dele.
+
+## Observações
+
+O site não coleta dados e não possui formulário de confirmação de presença. A imagem é uma proposta ilustrativa e não uma foto do restaurante. O ano 2026 foi considerado pela data desta conversa. Se mudar o ano, atualize também os textos, o dia da semana e o rodapé.
